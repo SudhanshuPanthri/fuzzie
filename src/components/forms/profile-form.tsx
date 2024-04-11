@@ -43,7 +43,7 @@ const ProfileForm=(props:Props)=>{
                         <FormItem>
                             <FormLabel className="text-lg">Email</FormLabel>
                             <FormControl>
-                                <Input placeholder="Email" type="email" s {...field}/>
+                                <Input placeholder="Email" type="email" {...field}/>
                             </FormControl>
                             <FormMessage />
                         </FormItem>
