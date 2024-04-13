@@ -1,3 +1,5 @@
+"use client"
+
 import { useRouter } from "next/navigation";
 import UploadCareButton from "./upload-care-button";
 import Image from "next/image";
@@ -24,8 +26,8 @@ const ProfilePicture=({userImage,onDelete,onUpload}:Props)=>{
             <div className="flex h-[30vh] flex-col items-center justify-center">
                 {userImage ? (
                     <>
-                        <div className="relative h-full w-2/12">
-                            <Image src={userImage} alt="User_Image" fill/>
+                        <div className="relative h-full w-full flex justify-center items-center">
+                            <Image src={userImage} alt="User_Image" width={220} height={220} className="border border-neutral-800 p-4 rounded-full"/>
                         </div>
                         <Button onClick={onRemoveProfileImage} className="bg-transparent text-white/70 hover:bg-transparent hover:text-white"><X />Remove Logo</Button>
                     </>
